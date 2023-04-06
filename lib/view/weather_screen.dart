@@ -144,6 +144,14 @@ class _WeatherScreenState extends State<WeatherScreen> {
                         style: f14RblackLetterSpacing2,
                         onSubmitted: (String) {},
                       ),
+                      Text(
+                        "To get started, type the name of a city in the search bar and click on the search icon.",
+                        style: TextStyle(
+                          fontSize: 14.0,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                      ),
                       Expanded(
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -189,6 +197,14 @@ class _WeatherScreenState extends State<WeatherScreen> {
                             ),
                             SizedBox(height: 16.0),
                           ],
+                        ),
+                      ),
+                      Text(
+                        'Stay informed and plan your day with confidence!',
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
                         ),
                       ),
                     ],
