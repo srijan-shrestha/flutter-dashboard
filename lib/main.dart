@@ -11,23 +11,6 @@ void main() {
 class MyApp extends StatelessWidget {
   MyApp({Key? key}) : super(key: key);
 
-  // @override
-  // Widget build(BuildContext context) {
-  //   return MaterialApp(
-  //     title: 'Weather App',
-
-  //     // to hide debug banner
-  //     debugShowCheckedModeBanner: false,
-  //     theme: ThemeData(
-  //       primarySwatch: Colors.green,
-  //     ),
-  //     home: SplashScreen(),
-  //     routes: {
-  //       '/home': (context) => WeatherScreen(),
-  //     },
-  //   );
-  // }
-
   @override
   Widget build(BuildContext context) => MaterialApp.router(
         routerDelegate: _router.routerDelegate,
