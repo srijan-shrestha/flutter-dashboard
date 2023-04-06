@@ -16,6 +16,7 @@ class WeatherScreen extends StatefulWidget {
 }
 
 class _WeatherScreenState extends State<WeatherScreen> {
+  // Call a service to use weather API and get a response.
   Future<WeatherModel> getData(bool isCurrentCity, String cityName) async {
     return await CallToApi().callWeatherAPi(isCurrentCity, cityName);
   }

@@ -13,29 +13,25 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => MaterialApp.router(
+        debugShowCheckedModeBanner: false, // this line removes the debug banner
         routerDelegate: _router.routerDelegate,
         routeInformationParser: _router.routeInformationParser,
         routeInformationProvider: _router.routeInformationProvider,
       );
-
-  final GoRouter _router = GoRouter(
-    routes: <GoRoute>[
-      GoRoute(
-        routes: <GoRoute>[
-          GoRoute(
-            path: 'weather',
-            builder: (BuildContext context, GoRouterState state) =>
-                const WeatherScreen(),
-          ),
-          GoRoute(
-            path: 'calculator',
-            builder: (BuildContext context, GoRouterState state) =>
-                CalculatorApp(),
-          ),
-        ],
-        path: '/',
-        builder: (BuildContext context, GoRouterState state) => SplashScreen(),
-      ),
-    ],
-  );
+  // Routes definition for different screens within the page
+  final GoRouter _router = GoRouter(routes: <GoRoute>[
+    GoRoute(
+      path: '/weather',
+      builder: (BuildContext context, GoRouterState state) =>
+          const WeatherScreen(),
+    ),
+    GoRoute(
+      path: '/calculator',
+      builder: (BuildContext context, GoRouterState state) => CalculatorApp(),
+    ),
+    GoRoute(
+      path: '/',
+      builder: (BuildContext context, GoRouterState state) => SplashScreen(),
+    ),
+  ]);
 }

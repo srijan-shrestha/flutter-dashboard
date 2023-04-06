@@ -38,6 +38,12 @@ class _CalculatorPageState extends State<CalculatorPage> {
         if (text == '×') {
           text = '*';
         }
+
+        // Replace the "÷" symbol with the standard "/" symbol
+        if (text == '÷') {
+          text = '/';
+        }
+
         _expression += text;
       }
     });
@@ -146,9 +152,11 @@ class _CalculatorPageState extends State<CalculatorPage> {
               ),
             ],
           ),
+          Spacer(), // Add a spacer between the weather button and calculator
+
           // Displays the current mathematical expression
           Container(
-            padding: EdgeInsets.all(16),
+            padding: EdgeInsets.all(32),
             child: Text(
               _expression,
               style: GoogleFonts.montserrat(
